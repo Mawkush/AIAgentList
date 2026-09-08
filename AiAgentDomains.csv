@@ -20,7 +20,7 @@ GrokBot (pftq community agent),pftq / community,GrokBot.exe,x.ai
 Grok Web,xAI,,grok.com
 Meta Llama (model family),Meta,ollama.exe,llama.com
 llama.cpp CLI,ggml-org,llama-cli.exe,huggingface.co
-llama.cpp Server,ggml-org,llama-server.exe,localhost:8080
+llama.cpp Server,ggml-org,llama-server.exe,localhost
 Ollama,Ollama,ollama.exe,ollama.ai
 LM Studio,Element Labs,LM Studio.exe,lmstudio.ai
 Jan,Jan,Jan.exe,jan.ai
@@ -33,3 +33,4 @@ goose,Agentic AI Foundation / Block origin,goose.exe,block.github.io
 Windsurf Editor,Codeium / Windsurf,Windsurf.exe,windsurf.com
 Tabby,TabbyML,tabby.exe,tabbyml.com
 Poe,Quora,Poe.exe,poe.com
+WorkBuddy, WorkBuddy, workbuddy.exe,,
