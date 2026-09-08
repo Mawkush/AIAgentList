@@ -1,35 +1,35 @@
-﻿Name;Vendor;Process;Domain
-ChatGPT Desktop;OpenAI;ChatGPT.exe;*.chatgpt.com
-OpenAI Codex Desktop;OpenAI;Codex.exe;openai.com
-OpenAI Codex CLI;OpenAI;codex-x86_64-pc-windows-msvc.exe;chatgpt.com
-Claude Desktop;Anthropic;Claude.exe;claude.ai
-Claude Code;Anthropic;claude.exe;anthropic.com
-Microsoft Copilot;Microsoft;Copilot.exe;copilot.cloud.microsoft
-GitHub Copilot CLI;GitHub;copilot.exe;*.githubcopilot.com
-GitHub Copilot for VS Code;GitHub;Code.exe;*.githubcopilot.com
-Google Gemini Web;Google;;gemini.google.com
-Gemini CLI;Google;gemini;gemini.google.com
-Perplexity Desktop;Perplexity;Perplexity.exe;perplexity.ai
-Cursor;Anysphere;Cursor.exe;cursor.com
-Cline CLI;Cline;cline;cline.bot
-Continue CLI;Continue;cn;continue.dev
-Aider;Aider;aider.exe;aider.chat
-Tabnine CLI;Tabnine;tabnine.exe;tabnine.com
-JetBrains AI Assistant;JetBrains;idea64.exe;jetbrains.com
-GrokBot (pftq community agent);pftq / community;GrokBot.exe;x.ai
-Grok Web;xAI;;grok.com
-Meta Llama (model family);Meta;ollama.exe;llama.com
-llama.cpp CLI;ggml-org;llama-cli.exe;huggingface.co
-llama.cpp Server;ggml-org;llama-server.exe;localhost:8080
-Ollama;Ollama;ollama.exe;ollama.ai
-LM Studio;Element Labs;LM Studio.exe;lmstudio.ai
-Jan;Jan;Jan.exe;jan.ai
-GPT4All;Nomic AI;GPT4All.exe;gpt4all.io
-AnythingLLM Desktop;Mintplex Labs;AnythingLLM.exe;anythingllm.com
-LocalAI;LocalAI;local-ai;localai.io
-Msty;Msty;Msty.exe;msty.app
-Pinokio;Pinokio;Pinokio.exe;pinokio.computer
-goose;Agentic AI Foundation / Block origin;goose.exe;block.github.io
-Windsurf Editor;Codeium / Windsurf;Windsurf.exe;windsurf.com
-Tabby;TabbyML;tabby.exe;tabbyml.com
-Poe;Quora;Poe.exe;poe.com
+﻿Name,Vendor,Process,Domain
+ChatGPT Desktop,OpenAI,ChatGPT.exe,*.chatgpt.com
+OpenAI Codex Desktop,OpenAI,Codex.exe,openai.com
+OpenAI Codex CLI,OpenAI,codex-x86_64-pc-windows-msvc.exe,chatgpt.com
+Claude Desktop,Anthropic,Claude.exe,claude.ai
+Claude Code,Anthropic,claude.exe,anthropic.com
+Microsoft Copilot,Microsoft,Copilot.exe,copilot.cloud.microsoft
+GitHub Copilot CLI,GitHub,copilot.exe,*.githubcopilot.com
+GitHub Copilot for VS Code,GitHub,Code.exe,*.githubcopilot.com
+Google Gemini Web,Google,,gemini.google.com
+Gemini CLI,Google,gemini,gemini.google.com
+Perplexity Desktop,Perplexity,Perplexity.exe,perplexity.ai
+Cursor,Anysphere,Cursor.exe,cursor.com
+Cline CLI,Cline,cline,cline.bot
+Continue CLI,Continue,cn,continue.dev
+Aider,Aider,aider.exe,aider.chat
+Tabnine CLI,Tabnine,tabnine.exe,tabnine.com
+JetBrains AI Assistant,JetBrains,idea64.exe,jetbrains.com
+GrokBot (pftq community agent),pftq / community,GrokBot.exe,x.ai
+Grok Web,xAI,grok.com
+Meta Llama (model family),Meta,ollama.exe,llama.com
+llama.cpp CLI,ggml-org,llama-cli.exe,huggingface.co
+llama.cpp Server,ggml-org,llama-server.exe,localhost:8080
+Ollama,Ollama,ollama.exe,ollama.ai
+LM Studio,Element Labs,LM Studio.exe,lmstudio.ai
+Jan,Jan,Jan.exe,jan.ai
+GPT4All,Nomic AI,GPT4All.exe,gpt4all.io
+AnythingLLM Desktop,Mintplex Labs,AnythingLLM.exe,anythingllm.com
+LocalAI,LocalAI,local-ai,localai.io
+Msty,Msty,Msty.exe,msty.app
+Pinokio,Pinokio,Pinokio.exe,pinokio.computer
+goose,Agentic AI Foundation / Block origin,goose.exe,block.github.io
+Windsurf Editor,Codeium / Windsurf,Windsurf.exe,windsurf.com
+Tabby,TabbyML,tabby.exe,tabbyml.com
+Poe,Quora,Poe.exe,poe.com
