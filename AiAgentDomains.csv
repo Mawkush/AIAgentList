@@ -1,12 +1,12 @@
 ﻿Name,Vendor,Process,Domain
-ChatGPT Desktop,OpenAI,ChatGPT.exe,*.chatgpt.com
+ChatGPT Desktop,OpenAI,ChatGPT.exe,chatgpt.com
 OpenAI Codex Desktop,OpenAI,Codex.exe,openai.com
 OpenAI Codex CLI,OpenAI,codex-x86_64-pc-windows-msvc.exe,chatgpt.com
 Claude Desktop,Anthropic,Claude.exe,claude.ai
 Claude Code,Anthropic,claude.exe,anthropic.com
 Microsoft Copilot,Microsoft,Copilot.exe,copilot.cloud.microsoft
-GitHub Copilot CLI,GitHub,copilot.exe,*.githubcopilot.com
-GitHub Copilot for VS Code,GitHub,Code.exe,*.githubcopilot.com
+GitHub Copilot CLI,GitHub,copilot.exe,githubcopilot.com
+GitHub Copilot for VS Code,GitHub,Code.exe,githubcopilot.com
 Google Gemini Web,Google,,gemini.google.com
 Gemini CLI,Google,gemini,gemini.google.com
 Perplexity Desktop,Perplexity,Perplexity.exe,perplexity.ai
