@@ -1,5 +1,4 @@
 ﻿Name;Vendor;Process;Domain
-;;;
 ChatGPT Desktop;OpenAI;ChatGPT.exe;*.chatgpt.com
 OpenAI Codex Desktop;OpenAI;Codex.exe;openai.com
 OpenAI Codex CLI;OpenAI;codex-x86_64-pc-windows-msvc.exe;chatgpt.com
