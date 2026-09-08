@@ -1,35 +1,36 @@
-Name;Vendor;Type;Usual_Process_or_Command_Windows;Primary_Domains;Process_Detection_Notes;Validation_Confidence;Validation_Basis;Source_URLs
-ChatGPT Desktop;OpenAI;Desktop app;ChatGPT.exe;*.chatgpt.com;"Dedicated app process; validate Store/package path and signer.";High;"OpenAI documents Windows app; network domains from OpenAI guidance.";"https://help.openai.com/en/articles/9982051 ; https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
-OpenAI Codex Desktop;OpenAI;Desktop coding agent;Codex.exe;openai.com;Desktop app can spawn bundled Codex components.;High;OpenAI Codex repository evidence shows Windows Codex.exe and bundled codex.exe.;"https://github.com/openai/codex ; https://github.com/openai/codex/issues/21147"
-OpenAI Codex CLI;OpenAI;CLI coding agent;codex-x86_64-pc-windows-msvc.exe;chatgpt.com;"Filename can vary by install/package; prefer path + command line.";High;Official Codex repo/docs and Windows release/package evidence.;"https://github.com/openai/codex ; https://help.openai.com/en/articles/11096431"
-Claude Desktop;Anthropic;Desktop app;Claude.exe;claude.ai;"Can be confused with Claude Code; use image path/package/signature.";Medium-High;"Anthropic confirms Windows app; official repo issues document Claude.exe alias.";"https://code.claude.com/docs/en/installation ; https://github.com/anthropics/claude-code/issues/25075"
-Claude Code;Anthropic;CLI coding agent;claude.exe;anthropic.com;"Often under %USERPROFILE%\.local\bin\claude.exe; validate signer.";High;Anthropic installation docs explicitly reference Windows claude.exe.;https://code.claude.com/docs/en/installation
-Microsoft Copilot;Microsoft;Desktop/web AI assistant;Copilot.exe;copilot.cloud.microsoft;Back process name with package/path/signer.;Medium;"Microsoft documents Windows Copilot app and endpoints; exact exe not consistently published.";"https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-copilot-on-windows ; https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-requirements"
-GitHub Copilot CLI;GitHub;CLI coding agent;copilot.exe;*.githubcopilot.com;Use command line/package evidence.;High command / Medium image;GitHub docs explicitly document copilot CLI and allowlist.;"https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically ; https://docs.github.com/en/copilot/reference/copilot-allowlist-reference"
-GitHub Copilot for VS Code;GitHub;IDE extension agent;Code.exe;*.githubcopilot.com;"No unique Copilot process; correlate extension inventory + network.";High;Copilot is a VS Code extension/client.;https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
-Google Gemini Web;Google;Web AI assistant;;gemini.google.com;No unique Gemini process in standard web use.;High;Google desktop help points users to gemini.google.com.;https://support.google.com/gemini/answer/13275745?co=GENIE.Platform%3DDesktop&hl=en
-Gemini CLI;Google;CLI coding agent;gemini;gemini.google.com;Use command line and installation path.;High command / Medium image;Official Gemini CLI docs define gemini command.;https://github.com/google-gemini/gemini-cli
-Perplexity Desktop;Perplexity;Desktop AI assistant;Perplexity.exe;perplexity.ai;Validate locally via signer/package/path.;Medium;"Vendor confirms Windows app; exact process name not published in cited docs.";https://www.perplexity.ai/help-center/en/articles/19800001-about-the-app
-Cursor;Anysphere;AI code editor/agent;Cursor.exe;cursor.com;Electron editor may spawn multiple Cursor.exe children.;Medium-High;Official Cursor download/docs confirm native Windows app.;https://cursor.com/download
-Cline CLI;Cline;CLI coding agent;cline;cline.bot;Prefer command-line + package telemetry.;High command / Medium image;Official Cline CLI reference.;https://docs.cline.bot/cli/cli-reference
-Continue CLI;Continue;CLI coding agent;cn;continue.dev;Detect command line 'cn' + package/path.;High command / Medium image;Official Continue docs explicitly use cn.;https://docs.continue.dev/cli/quickstart
-Aider;Aider;CLI coding agent;aider.exe;aider.chat;Network destinations depend on selected model provider.;High;Official Aider installation docs.;https://aider.chat/docs/install.html
-Tabnine CLI;Tabnine;CLI coding agent;tabnine.exe;tabnine.com;Enterprise deployments may use custom host.;High;Tabnine docs explicitly reference tabnine.exe and API host.;"https://docs.tabnine.com/main/getting-started/tabnine-cli/getting-started/installation ; https://docs.tabnine.com/main/getting-started/tabnine-cli/troubleshooting"
-JetBrains AI Assistant;JetBrains;IDE plugin agent;idea64.exe;jetbrains.com;No unique AI Assistant process.;High host-model;Official docs describe AI Assistant as IDE plugin.;https://www.jetbrains.com/help/ai-assistant/about-ai-assistant.html
-GrokBot (pftq community agent);pftq / community;Third-party desktop-control agent;GrokBot.exe;x.ai;Runs as Administrator per project instructions and can control mouse/keyboard and execute commands. Distinguish from official xAI Grok Bot.;High;Public project release and README explicitly instruct running GrokBot.exe.;"https://github.com/pftq/GrokBot ; https://github.com/pftq/GrokBot/releases"
-Grok Web;xAI;Web AI assistant;;grok.com;Standard web use has no unique local Grok process.;High;xAI/Grok web service is browser-hosted.;"https://grok.com ; https://x.ai"
-Meta Llama (model family);Meta;Model family;ollama.exe;llama.com;Llama is a model, not an executable. Hunt the runtime.;High;"Meta publishes Llama as a model family; execution depends on runtime.";https://www.llama.com
-llama.cpp CLI;ggml-org;Local LLM runtime;llama-cli.exe;huggingface.co;"Can run fully offline; domain may be absent after model download.";High;Official llama.cpp docs/releases show Windows binaries.;"https://github.com/ggml-org/llama.cpp ; https://github.com/ggml-org/llama.cpp/discussions/13637"
-llama.cpp Server;ggml-org;Local LLM server;llama-server.exe;localhost:8080;Important server process for Llama/Qwen/Mistral/DeepSeek GGUF models.;High;Official server README explicitly documents llama-server.exe on Windows.;https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
-Ollama;Ollama;Local LLM runtime/server;ollama.exe;ollama.ai;"Runs natively in background on Windows; model inference may be fully local.";High;Official Windows docs describe background native app and ollama command.;https://docs.ollama.com/windows
-LM Studio;Element Labs;Local LLM desktop app;LM Studio.exe;lmstudio.ai;"GUI runs local models; exact GUI filename should be verified locally if used for blocking.";Medium-High;Official docs confirm Windows desktop app and lms CLI.;"https://lmstudio.ai/docs/app ; https://lmstudio.ai/docs/cli"
-Jan;Jan;Local AI desktop app;Jan.exe;jan.ai;"Local-first desktop AI; runtime child processes may vary.";Medium;"Official Jan docs confirm Windows desktop application; exact image should be locally verified.";https://jan.ai/docs/desktop/windows
-GPT4All;Nomic AI;Local AI desktop/runtime;GPT4All.exe;gpt4all.io;"Can operate locally; network may only occur for model retrieval/updates.";Medium;"Official GPT4All project/docs confirm Windows desktop app; exact process naming can vary by release.";"https://docs.gpt4all.io ; https://www.nomic.ai/gpt4all"
-AnythingLLM Desktop;Mintplex Labs;Local/RAG AI desktop app;AnythingLLM.exe;anythingllm.com;May call OpenAI/Anthropic/Ollama/etc depending configuration.;Medium;"Official AnythingLLM docs provide Windows Desktop distribution; exact executable should be verified by package.";https://docs.anythingllm.com
-LocalAI;LocalAI;Self-hosted local inference server;local-ai;localai.io;"Often containerized; process on Windows host may be Docker/WSL rather than local-ai.exe.";Medium-High;Official LocalAI project/docs define local-ai server/container usage.;https://localai.io
-Msty;Msty;Local/cloud AI desktop app;Msty.exe;msty.app;"Can connect local and cloud models; exact image should be package-validated.";Medium;"Vendor provides Windows desktop distribution; process name is commonly observed but not strongly documented.";https://msty.app
-Pinokio;Pinokio;AI app launcher/runtime;Pinokio.exe;pinokio.computer;"Launcher can install/run many AI projects; process tree is more valuable than name alone.";Medium-High;Official Pinokio site provides desktop AI browser/runtime.;https://pinokio.computer
-goose;Agentic AI Foundation / Block origin;Desktop + CLI AI agent;goose.exe;block.github.io;"General-purpose local agent; can use MCP and multiple providers.";High command / Medium image;Official site confirms native Windows desktop app and CLI.;https://block.github.io/goose/
-Windsurf Editor;Codeium / Windsurf;AI code editor/agent;Windsurf.exe;windsurf.com;"Dedicated editor; validate signer and install path.";Medium-High;"Official Windsurf docs/download support Windows editor; exact process name commonly follows product binary.";"https://windsurf.com ; https://docs.windsurf.com"
-Tabby;TabbyML;Self-hosted coding assistant;tabby.exe;tabbyml.com;Often self-hosted/server or containerized.;Medium-High;Official Tabby project/docs define self-hosted server binaries/containers.;"https://tabby.tabbyml.com ; https://github.com/TabbyML/tabby"
-Poe;Quora;Multi-model AI client;Poe.exe;poe.com;"Desktop/web access; model provider behind Poe is abstracted.";Medium;Vendor provides Poe service and desktop clients depending platform/version.;https://poe.com
+﻿Name;Vendor;Process;Domain
+;;;
+ChatGPT Desktop;OpenAI;ChatGPT.exe;*.chatgpt.com
+OpenAI Codex Desktop;OpenAI;Codex.exe;openai.com
+OpenAI Codex CLI;OpenAI;codex-x86_64-pc-windows-msvc.exe;chatgpt.com
+Claude Desktop;Anthropic;Claude.exe;claude.ai
+Claude Code;Anthropic;claude.exe;anthropic.com
+Microsoft Copilot;Microsoft;Copilot.exe;copilot.cloud.microsoft
+GitHub Copilot CLI;GitHub;copilot.exe;*.githubcopilot.com
+GitHub Copilot for VS Code;GitHub;Code.exe;*.githubcopilot.com
+Google Gemini Web;Google;;gemini.google.com
+Gemini CLI;Google;gemini;gemini.google.com
+Perplexity Desktop;Perplexity;Perplexity.exe;perplexity.ai
+Cursor;Anysphere;Cursor.exe;cursor.com
+Cline CLI;Cline;cline;cline.bot
+Continue CLI;Continue;cn;continue.dev
+Aider;Aider;aider.exe;aider.chat
+Tabnine CLI;Tabnine;tabnine.exe;tabnine.com
+JetBrains AI Assistant;JetBrains;idea64.exe;jetbrains.com
+GrokBot (pftq community agent);pftq / community;GrokBot.exe;x.ai
+Grok Web;xAI;;grok.com
+Meta Llama (model family);Meta;ollama.exe;llama.com
+llama.cpp CLI;ggml-org;llama-cli.exe;huggingface.co
+llama.cpp Server;ggml-org;llama-server.exe;localhost:8080
+Ollama;Ollama;ollama.exe;ollama.ai
+LM Studio;Element Labs;LM Studio.exe;lmstudio.ai
+Jan;Jan;Jan.exe;jan.ai
+GPT4All;Nomic AI;GPT4All.exe;gpt4all.io
+AnythingLLM Desktop;Mintplex Labs;AnythingLLM.exe;anythingllm.com
+LocalAI;LocalAI;local-ai;localai.io
+Msty;Msty;Msty.exe;msty.app
+Pinokio;Pinokio;Pinokio.exe;pinokio.computer
+goose;Agentic AI Foundation / Block origin;goose.exe;block.github.io
+Windsurf Editor;Codeium / Windsurf;Windsurf.exe;windsurf.com
+Tabby;TabbyML;tabby.exe;tabbyml.com
+Poe;Quora;Poe.exe;poe.com
